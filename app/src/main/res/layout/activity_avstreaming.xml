@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.pili.droid.livedemo.stream.CameraPreviewFrameView
+        android:id="@+id/cameraPreviewFrameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        app:fab_labelStyle="@style/label_style"
+        app:fab_labelsPosition="right">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FBCaptureFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCaptureFrame"
+            app:fab_size="mini"
+            app:fab_title="@string/button_capture" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FBOrientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickOrientation"
+            app:fab_size="mini"
+            app:fab_title="横屏" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FBPreviewMirror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickPreviewMirror"
+            app:fab_size="mini"
+            app:fab_title="@string/button_preview_mirror" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FBEncodingMirror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickEncodingMirror"
+            app:fab_size="mini"
+            app:fab_title="@string/button_encoding_mirror" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FBBeautyOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBeauty"
+            app:fab_size="mini"
+            app:fab_title="美颜开" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/debugTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debug:"
+            android:textColor="@color/pldroid_streaming_yellow" />
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debug:"
+            android:textColor="@color/pldroid_streaming_white" />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_pressed"
+        android:onClick="onClickSwitchCamera"
+        android:src="@drawable/ic_switch_camera" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_pressed"
+        android:onClick="onClickExit"
+        android:src="@drawable/ic_close" />
+
+    <CheckBox
+        android:id="@+id/MuteCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:button="@drawable/mute_btn_selector"
+        android:textColor="@android:color/white"
+        tools:ignore="RtlHardcoded" />
+
+    <include layout="@layout/camera_button_holder" />
+
+</FrameLayout>

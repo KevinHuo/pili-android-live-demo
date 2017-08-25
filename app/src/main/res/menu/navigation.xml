@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/NavigationPlay"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/title_player" />
+
+    <item
+        android:id="@+id/NavigationStream"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/title_stream" />
+
+    <item
+        android:id="@+id/NavigationAbout"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/title_about" />
+
+</menu>

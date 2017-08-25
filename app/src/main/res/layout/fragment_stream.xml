@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/StreamPushURLEditView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:hint="@string/stream_input_url"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/StreamURLGenBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:singleLine="true"
+                android:text="@string/stream_gen_by_roomid"
+                android:theme="@style/ButtonStyle" />
+        </LinearLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/StreamTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/StreamViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"></android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/StreamFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:tint="@android:color/background_light"
+        app:backgroundTint="?attr/colorPrimary"
+        app:elevation="3dp"
+        app:rippleColor="@android:color/holo_blue_light"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ProgressBar
+        android:id="@+id/StreamURLProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:visibility="gone" />
+
+</FrameLayout>
