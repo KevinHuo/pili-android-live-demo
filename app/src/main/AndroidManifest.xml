@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pili.droid.livedemo">
+    package="com.qiniu.pili.droid.livedemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -22,7 +22,7 @@
 
 
     <application
-        android:name="com.pili.droid.livedemo.StreamingApplication"
+        android:name="com.qiniu.pili.droid.livedemo.StreamingApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,7 +30,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.pili.droid.livedemo.MainActivity"
+            android:name="com.qiniu.pili.droid.livedemo.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -42,13 +42,13 @@
         </activity>
 
         <activity
-            android:name="com.pili.droid.livedemo.stream.AVStreamingActivity"
+            android:name="com.qiniu.pili.droid.livedemo.stream.AVStreamingActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
 
         <activity
-            android:name="com.pili.droid.livedemo.player.PLVideoViewActivity"
+            android:name="com.qiniu.pili.droid.livedemo.player.PLVideoViewActivity"
             android:theme="@style/AppThemeFullscreen" />
 
 

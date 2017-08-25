@@ -94,8 +94,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
-            android:visibility="gone"
-            android:gravity="left">
+            android:gravity="left"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -271,7 +271,16 @@
                 android:checked="true"
                 android:paddingLeft="5dp"
                 android:text="@string/config_close" />
-
         </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/DebugModeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:text="@string/stream_debug_mode" />
     </LinearLayout>
 </ScrollView>
